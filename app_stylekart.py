@@ -17,9 +17,9 @@ import time
 APP_DIR = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, APP_DIR)
 
-from models.churn_model import ChurnPredictor, CustomerSegmenter, RewardRecommender
-from models.ai_offer_generator import AIOfferGenerator
-from sdk.stylekart_integration import StyleKartIntegration, RewardPeSDK
+from churn_model import ChurnPredictor, CustomerSegmenter, RewardRecommender
+from ai_offer_generator import AIOfferGenerator
+from stylekart_integration import StyleKartIntegration, RewardPeSDK
 
 # Page config
 st.set_page_config(
