@@ -105,6 +105,7 @@ if 'integration_complete' not in st.session_state:
 @st.cache_data
 def load_stylekart_data():
     """Load StyleKart customer data"""
+    os.makedirs(os.path.join(APP_DIR, 'data'), exist_ok=True)
     data_path = os.path.join(APP_DIR, 'data', 'stylekart_customers.csv')
     if os.path.exists(data_path):
         return pd.read_csv(data_path)
