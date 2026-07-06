@@ -110,7 +110,7 @@ def load_stylekart_data():
         return pd.read_csv(data_path)
     else:
         # Generate if not exists
-        from data.generate_stylekart_data import generate_customer
+        from generate_stylekart_data import generate_customer
         customers = [generate_customer(i) for i in range(1500)]
         df = pd.DataFrame(customers)
         df.to_csv(data_path, index=False)
